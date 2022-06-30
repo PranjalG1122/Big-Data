@@ -2,21 +2,20 @@ import React, {useState} from "react"
 import {Link} from 'react-router-dom'
 
 
+// Home    -----       Big-Data  HDFS  Contact-Us
+
 export default function Navbar() {
-    const [click, setClick] = useState(false); 
-    function handleClick() {
-        setClick(!click)
-    }
     return(
         <>
             <nav className='navbar'>
                 <div className='navbar-container'>
-                    <Link to='/' className='navbar-logo'>TRVL</Link>
-                    <div className='menu-icon' onClick={handleClick}>
-                        <i className={click ? 'fas fa-times' : 'fas fa-bars'}></i>
-                    </div>
-                    <Link to='/test' path='./components/Main'>yo</Link>
-                </div>  
+                    <div className='navbar-button1'><Link to='/'>Home</Link></div>
+                    <ul>
+                        <li><a href='#'>Big Data</a></li>
+                        <li><a href='#'>HDFS</a></li>
+                    </ul>
+                    <div className='navbar-button1'><Link to='/'>Contact Us</Link></div>
+                </div>
             </nav>
         </>        
     )
