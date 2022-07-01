@@ -45,7 +45,8 @@ export default function Navbar() {
                     <div className={click ? 'navbar-button-middle' : 'false-contact'}>  
                         <Link to='/' onClick={setClick}>Big Data</Link>
                         <Link to='/' onClick={setClick}>HDFS</Link>
-                        <Link to='/about-us' onClick={setClick}>Contact Us</Link>
+                        <Link to='/references' onClick={setClick}>References</Link>
+                        <Link to='/contact-us' onClick={setClick}>Contact Us</Link>
                     </div>
                 </div>
             </nav>
