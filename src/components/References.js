@@ -6,6 +6,7 @@ export default function References() {
     const card = data.map(item => {
         return(
             <ReferencesCard 
+                key={item.id}
                 item={item}
             />
         )
