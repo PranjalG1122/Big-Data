@@ -4,7 +4,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
 
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -29,7 +28,6 @@ code {
 /* Footer and Copyright Section ----------------------------------------------------- */
 
 .footer {
-  /* background-color: #242424; */
   background-color: #151515;
   font-family: 'Open Sans', sans-serif;
   font-family: 'Poppins', sans-serif;
@@ -78,7 +76,7 @@ code {
 }
 
 .footer-col ul li a:hover {
-  color: #27bed9;
+  color: #42a4ff;
   padding-left: 5px;
 }
 
@@ -93,12 +91,12 @@ code {
 /* Navbar ------------------------------------------------------------------------------------- */
 
 .navbar {
-  /* background-color: #242424; */
   background-color: #151515;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  overflow: hidden;
 }
 
 .navbar-container {
@@ -179,17 +177,106 @@ code {
   .false-contact a:hover {
     background-color: #474747;
   }
+  .home-intro-text {
+    min-width: 95%;
+  }
+  .home-intro-sidebar {
+    display: none;
+  }
+}
+/* Home --------------------------------------------------------------------------------------------------- */
+.home-background-image {
+  background-image: linear-gradient(rgba(41, 25, 54, 0.6),rgba(41, 25, 54, 0.6)),url(images/background.jpg);
+  width: 100%;
+  background-position: center;
+  min-height: 100vh;
+  background-size: cover;
 }
 
+.home-background-image h1 {
+  text-align: center;
+  padding: 18% 0 0 0;
+  font-size: 50px;
+  color: #fff;
+}
 
+.home-intro-container {
+  display: flex; 
+  align-items: flex-start;
+  color: #fff;
+  justify-content: space-around;
+  margin: 20px 15px;
+}
 
-/* Home --------------------------------------------------------------------------------------------------- */
+.home-intro-text {
+  flex-grow: 5;
+  display: flex;
+  flex-direction: column;
+  min-height: 600px;
+  margin: 0 7px 10px 0;
+  padding: 5px;
+  max-width: 75%;
+}
+
+.home-data-home {
+  margin: 0 0 12px 0;
+}
+
+.home-data-home h1 {
+  font-size: 25px;
+  font-weight: 750;
+}
+
+.home-data-home p {
+  font-size: 16px;
+}
+
+.home-intro-sidebar {
+  background-color: #1289c9;
+  flex-grow: 3;
+  min-height: 500px;
+  margin: 0 0 0 7px;
+  padding: 5px;
+}
+
+.home-about-us {
+  background-image: linear-gradient(rgba(25, 28, 38, 0.7),rgba(25, 28, 38, 0.7)),url(images/man-smiling.jpg);
+  max-width: 75%;
+  margin: 60px auto;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  padding: 90px;
+  border-radius: 15px;
+}
+
+.home-about-us h1 {
+  color: #fff;
+  font-size: 32px;
+  margin: 10px 0;
+}
+
+.home-about-us a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  margin: 20px 0;
+  padding: 2px 3px;
+  outline: solid 2px #fff;
+}
 
 /* References Card------------------------------------------------------------------------------------------ */
 
 .references {
-  margin: 0;
+  margin: 65px 0 0 0;
   font-family: 'Open Sans', sans-serif;
+}
+
+.refererences-title {
+  color: #fff;
+  font-weight: 800;
+  font-size: 30px;
+  text-align: center;
 }
 
 .reference-card {
@@ -197,34 +284,32 @@ code {
   margin: 15px 1% 0 1%;
   display: flex;
   flex-direction: column;
-  box-shadow: 5px 5px 5px 2px rgb(0, 0, 0, 0.3);
   border-radius: 10px;
-  background-color: #f0f0f0;
+  color: #fff;
 }
 
 .reference-title {
-  color: #1c1c1c;
   margin: 0 0 5px 0;
   font-size: 22px;
   font-weight: 800;
 }
 
 .reference-link-container {
-  color: #242424;
   display: flex;
   align-items: center;
 }
 
 .reference-link-container a {
   margin: 0 0 0 10px;
-  color: #242424;
+  color: #fff;
   text-decoration: none;
   font-weight: 450;
   transition: all 0.2s ease;
 }
 
 .reference-link-container a:hover {
-  color: #008da6;
+  /* color: #008da6; */
+  color: #42a4ff;
   padding: 0 0 0 3px;
 }
 
@@ -236,10 +321,9 @@ code {
   margin: 0 0 0 5px;
 }
 
-/* Contact Us */
+/* Contact Us --------------------------------------------------------------------------------------------------*/
 
 .contact-us {
-  margin: 80px 0 0 0;
   font-family: 'Inter', sans-serif;
 }
 
@@ -248,7 +332,7 @@ code {
   text-align: center;
   font-size: 60px;
   font-weight: 600;
-  margin: 100px 0;
+  margin: 90px 0 20px 0;
 }
 
 .contact-us-container {
@@ -256,8 +340,6 @@ code {
   margin: 0 5% 0 5%;
   align-items: flex-start;
   justify-content: space-around;
-  /* justify-content: center;
-  flex-direction: column; */
 }
 
 .contact-us-get-in-touch {
@@ -311,7 +393,11 @@ code {
   cursor: pointer;
 }
 
+/* About Us ---------------------------------------------------------------------------------------------------------- */
 
+.about-us {
+  margin: 65px 0 0 0;
+}
 
 
 

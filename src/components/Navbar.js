@@ -29,9 +29,6 @@ export default function Navbar() {
     //       window.removeEventListener('resize', detectSize)
     //     }
     //   }, [windowDimenion])
-
-    
-
     return(
         <>
             <nav className='navbar'>
@@ -43,9 +40,8 @@ export default function Navbar() {
                         </button>
                     </div>
                     <div className={click ? 'navbar-button-middle' : 'false-contact'}>  
-                        <Link to='/' onClick={setClick}>Big Data</Link>
-                        <Link to='/' onClick={setClick}>HDFS</Link>
                         <Link to='/references' onClick={setClick}>References</Link>
+                        <Link to='/about-us' onClick={setClick}>About Us</Link>
                         <Link to='/contact-us' onClick={setClick}>Contact Us</Link>
                     </div>
                 </div>

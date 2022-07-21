@@ -2,7 +2,6 @@ import './App.css';
 import Navbar from './components/Navbar'
 import Home from './components/Home'
 import Footer from  './components/Footer'
-import data from './components/data'
 import AboutUs from './components/AboutUs'
 import References from './components/References'
 import ContactUs from './components/ContactUs'
@@ -22,7 +21,6 @@ export default function App() {
         </Routes>
         <Footer />
       </Router>
-      
     </>
   );
 }

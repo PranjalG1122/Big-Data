@@ -1,23 +1,26 @@
 import React from 'react'
-import ReferencesCard from './ReferencesCard'
-import data from './data'
+import data_references from './data-references'
 
 export default function References() {
-    const card = data.map(item => {
+    const referencesCard = data_references.map(item => {
         return(
-            <ReferencesCard 
-                key={item.id}
-                item={item}
-            />
+            <section className='reference-card'>
+                <div className='reference-title'>
+                    {item.title}
+                    <span className='reference-type'>{item.type}</span>
+                </div>
+                <div className='reference-link-container'>
+                    <i className={item.tag}></i>
+                    <a href={item.link} target='_blank'>{item.link}</a>
+                </div>    
+            </section>
         )
     })
     return(
         <>
             <section className='references'>
-                <br/>
-                <br/>
-                <br/>
-                {card}                
+                <div className='refererences-title'><h1>References</h1></div>
+                {referencesCard}                
             </section>
         </>
     )
