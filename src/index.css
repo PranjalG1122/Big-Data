@@ -10,7 +10,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
-  min-height: 400vh;
+  min-height: 500vh;
   background-color: #292929;
 }
 
@@ -149,54 +149,22 @@ code {
   font-size: 25px;
 }
 
-@media only screen and (max-width: 600px) {
-  .navbar-button-middle {
-    display: none;
-  }
-  .navbar-container {
-    display: block;
-  }
-  .navbar-button-home,.navbar-button-home button {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .false-contact {
-    display: flex;
-    flex-direction: column;
-    margin: 10px 0 0 0;
-  }
-  .false-contact a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 0 10px 0;
-    transition: all 0.3s ease;
-    width: 100%;
-    text-align: center;
-  }
-  .false-contact a:hover {
-    background-color: #474747;
-  }
-  .home-intro-text {
-    min-width: 95%;
-  }
-  .home-intro-sidebar {
-    display: none;
-  }
-}
 /* Home --------------------------------------------------------------------------------------------------- */
 .home-background-image {
   background-image: linear-gradient(rgba(41, 25, 54, 0.6),rgba(41, 25, 54, 0.6)),url(images/background.jpg);
   width: 100%;
+  margin: 55px 0 0 0;
+  min-height: 90vh;
   background-position: center;
-  min-height: 100vh;
   background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .home-background-image h1 {
   text-align: center;
-  padding: 18% 0 0 0;
-  font-size: 50px;
+  font-size: 70px;
   color: #fff;
 }
 
@@ -236,12 +204,14 @@ code {
   flex-grow: 3;
   min-height: 500px;
   margin: 0 0 0 7px;
-  padding: 5px;
+  padding: 5px 15px;
+  border-radius: 15px;
+  box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2), 0 12px 40px 0 rgba(0,0,0,0.19);
 }
 
 .home-about-us {
   background-image: linear-gradient(rgba(25, 28, 38, 0.7),rgba(25, 28, 38, 0.7)),url(images/man-smiling.jpg);
-  max-width: 75%;
+  max-width: 90%;
   margin: 60px auto;
   background-position: center;
   background-size: cover;
@@ -252,7 +222,7 @@ code {
 
 .home-about-us h1 {
   color: #fff;
-  font-size: 32px;
+  font-size: 20px;
   margin: 10px 0;
 }
 
@@ -260,9 +230,17 @@ code {
   color: #fff;
   text-decoration: none;
   font-size: 18px;
+  font-weight: 600;
   margin: 20px 0;
-  padding: 2px 3px;
+  border-radius: 5px;
+  padding: 3px 12px;
   outline: solid 2px #fff;
+  transition: all 0.2s ease-in;
+}
+
+.home-about-us a:hover {
+  background-color: #fff;
+  color: #000;
 }
 
 /* References Card------------------------------------------------------------------------------------------ */
@@ -395,10 +373,143 @@ code {
 
 /* About Us ---------------------------------------------------------------------------------------------------------- */
 
-.about-us {
-  margin: 65px 0 0 0;
+.about-background {
+  margin: 55px 0 0 0;
+  background-image: linear-gradient(rgba(25, 28, 38, 0.7),rgba(25, 28, 38, 0.7)),url(images/about-background.png);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
+.about-background h1 {
+  color: #fff;
+  font-size: 90px;
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin: 15px;
+  color: #fff;
+}
+
+.about-container h1 {
+  font-size: 22px;
+  font-weight: 750;
+  text-align: center;
+}
+
+.about-container p {
+  font-size: 15px;
+}
+
+.about-text {
+  padding: 7px;
+  margin: 0 10px 0 0;
+}
+
+.about-navigation-true {
+  background-color: #1289c9;
+  padding: 8px 10px;
+  border-radius: 10px;
+  min-height: 500px;
+  min-width: 18%;
+  box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2), 0 12px 40px 0 rgba(0,0,0,0.19);
+}
+
+.about-mobile-icon-true {
+  position: fixed;
+  top: 50%;
+  right: 5px;
+}
+
+.about-mobile-icon-false {
+  position: fixed;
+  top: 50%;
+  right: 150px;
+}
+
+.about-mobile-button {
+  display: none;
+  font-size: 50px;
+  color: #fff;
+  border: none;
+  background-color: transparent;
+}
+
+.about-navigation-false {
+  background-color: #1289c9;
+  border-top-left-radius: 200px;
+  border-bottom-left-radius: 200px;
+  position: fixed;
+  padding: 100px 5px;
+  top: 20%;
+  right: 0;
+  min-height: 500px;
+  min-width: 145px;
+  transition: all 0.3s ease;
+}
+
+/* Media --------------------------------------------------------------------------------------------------------- */
+
+@media only screen and (max-width: 600px) {
+  .navbar-button-middle {
+    display: none;
+  }
+  .navbar-container {
+    display: block;
+  }
+  .navbar-button-home,.navbar-button-home button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .false-contact {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0 0 0;
+  }
+  .false-contact a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 0 10px 0;
+    transition: all 0.3s ease;
+    width: 100%;
+    text-align: center;
+  }
+  .false-contact a:hover {
+    background-color: #474747;
+  }
+  .home-intro-text {
+    min-width: 95%;
+  }
+  .home-intro-sidebar {
+    display: none;
+  }
+  .home-background-image {
+    min-height: 50vh;
+  }
+  .home-background-image h1 {
+    font-size: 30px;
+  }
+  .about-background h1 {
+    font-size: 40px;
+  }
+  .about-background {
+    min-height: 40vh;
+  }
+  .about-navigation-true {
+    display: none;
+  }
+  .about-mobile-button {
+    display: block;
+  }
+}
 
 
 

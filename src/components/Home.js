@@ -14,7 +14,9 @@ export default function Home() {
     return (
         <main className="home">
             <div className='home-background-image'>
-                <h1>Big Data Analytics in Banking</h1>
+                <div>
+                    <h1>Big Data Analytics in Banking</h1>
+                </div>
             </div>   
             <div className='home-intro-container'>
                 <div className='home-intro-text'>
@@ -26,7 +28,7 @@ export default function Home() {
             </div>
             <div className='home-about-us'>
                 <h1>Get to Know Us More</h1>
-                <a href=''>About Us</a>
+                <Link to='/about-us'>About Us</Link>
             </div>
         </main>
     )
