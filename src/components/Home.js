@@ -36,7 +36,7 @@ export default function Home() {
             </div>
             <div style={mobileClick ? {right: '5px'} : {right: '150px'}} className='about-mobile-icon'>
                     <button className='about-mobile-button' onClick={mobileClicked}>
-                        <i class={mobileClick ? 'fa-solid fa-circle-chevron-left' : 'fa-solid fa-circle-chevron-right'}></i>
+                        <i class={mobileClick ? 'fa-solid fa-left-long' : 'fa-solid fa-right-long'}></i>
                     </button>
                 </div>
         </main>
