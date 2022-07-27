@@ -4,7 +4,7 @@ exports.handler = async function (event, context) {
   console.log(event.queryStringParameters);
   let testAccount = await nodemailer.createTestAccount();
   let transporter = nodemailer.createTransport({
-    host: "smtp.ethereal.email",
+    host: "smtp.gmail.com",
     port: 587,
     secure: false,
     auth: {
