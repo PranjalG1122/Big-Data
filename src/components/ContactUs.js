@@ -29,15 +29,22 @@ export default function ContactUs() {
         </div>
         <div className="contact-us-container">{dataContactUs}</div>
         <form
-          className="contact-us-message-container"
-          action="/.netlify/functions/email"
+          className="contact-us-message-container pageclip-form"
+          action="https://send.pageclip.co/gCAzd0XTTosqx7FS30ZKI4SVfPrMkNnz"
+          method="post"
         >
-          <input type="text" placeholder="Name"></input>
-          <input type="text" placeholder="Surname"></input>
-          <input type="text" placeholder="Phone"></input>
-          <input type="text" placeholder="Email"></input>
-          <input placeholder="Message" class="contact-us-message-box"></input>
-          <input type="submit"></input>
+          <input type="text" name="name" placeholder="Name"></input>
+          <input type="text" name="surname" placeholder="Surname"></input>
+          <input type="tel" name="tel" placeholder="Phone"></input>
+          <input type="email" name="email" placeholder="Email"></input>
+          <input
+            placeholder="Message"
+            name="message"
+            class="contact-us-message-box"
+          ></input>
+          <button type="submit" className="pageclip-form__submit">
+            submit
+          </button>
         </form>
       </section>
     </>
