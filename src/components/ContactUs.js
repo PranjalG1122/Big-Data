@@ -43,7 +43,7 @@ export default function ContactUs() {
             class="contact-us-message-box"
           ></input>
           <button type="submit" className="pageclip-form__submit">
-            submit
+            submittt
           </button>
         </form>
       </section>
